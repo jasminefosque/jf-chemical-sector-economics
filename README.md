@@ -6,8 +6,9 @@
 
 > **Portfolio Demonstration Project** — This dashboard showcases advanced data architecture, TypeScript development, and React visualization capabilities using synthetic industrial economics data. It demonstrates enterprise-level software engineering patterns without exposing proprietary data or production infrastructure.
 
-![Dashboard Preview](docs/screenshot-placeholder.png)
-*Screenshot placeholder - Dashboard visualizes 20 chemical sector economic metrics across 6 categories*
+![Dashboard Screenshot](https://github.com/user-attachments/assets/7143729c-2d1f-4bcb-a4f7-7cd4070bef57)
+
+*Dashboard showing Industrial Stress Composite, Oil & Natural Gas Prices with shock event markers, and Capacity Utilization trends*
 
 ---
 
