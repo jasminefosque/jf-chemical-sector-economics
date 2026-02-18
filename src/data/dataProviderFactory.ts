@@ -1,4 +1,4 @@
-import { DataProvider } from './DataProvider';
+import type { DataProvider } from './DataProvider';
 import { SyntheticDataProvider } from './adapters/SyntheticDataProvider';
 import { OpenDataProvider } from './adapters/OpenDataProvider';
 

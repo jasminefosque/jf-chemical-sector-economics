@@ -1,4 +1,4 @@
-import { Observation } from '../../models/schemas';
+import type { Observation } from '../../models/schemas';
 import { getActiveShock } from './shockEvents';
 
 /**
@@ -12,7 +12,7 @@ export function generateDates(
   const dates: string[] = [];
   const start = new Date(startDate);
   const end = new Date(endDate);
-  let current = new Date(start);
+  const current = new Date(start);
 
   while (current <= end) {
     dates.push(current.toISOString().split('T')[0]);
@@ -60,13 +60,6 @@ function cyclicalPattern(
   phase: number = 0
 ): number {
   return amplitude * Math.sin((2 * Math.PI * t) / period + phase);
-}
-
-/**
- * Generate trending pattern
- */
-function trendPattern(t: number, slope: number, baseline: number): number {
-  return baseline + slope * t;
 }
 
 /**

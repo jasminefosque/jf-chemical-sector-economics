@@ -1,7 +1,8 @@
-import { DataProvider } from '../DataProvider';
-import { TimeSeries, ShockEvent, QueryParams, MetricMetadata, TimeSeriesSchema } from '../../models/schemas';
-import { SHOCK_EVENTS, getShockEventsByDateRange } from './shockEvents';
-import { getMetricMetadata } from './metricDefinitions';
+import type { DataProvider } from '../DataProvider';
+import type { TimeSeries, ShockEvent, QueryParams, MetricMetadata, Observation } from '../../models/schemas';
+import { TimeSeriesSchema } from '../../models/schemas';
+import { SHOCK_EVENTS, getShockEventsByDateRange } from '../synthetic/shockEvents';
+import { getMetricMetadata } from '../synthetic/metricDefinitions';
 import {
   generateDates,
   generateCrudeOilPrice,
@@ -23,7 +24,7 @@ import {
   generateComplianceBurdenScore,
   generateRegulatoryIntensityIndex,
   generateIndustrialStressComposite,
-} from './generators';
+} from '../synthetic/generators';
 
 /**
  * Synthetic data provider for portfolio demonstration
@@ -100,7 +101,7 @@ export class SyntheticDataProvider implements DataProvider {
   }
 
   private generateObservations(metricId: string, dates: string[]) {
-    const generators: Record<string, (dates: string[]) => any> = {
+    const generators: Record<string, (dates: string[]) => Observation[]> = {
       crude_oil_price: generateCrudeOilPrice,
       natural_gas_price: generateNaturalGasPrice,
       feedstock_spread_index: generateFeedstockSpreadIndex,

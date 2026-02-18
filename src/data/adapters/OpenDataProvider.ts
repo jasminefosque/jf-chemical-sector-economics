@@ -1,5 +1,5 @@
-import { DataProvider } from '../DataProvider';
-import { TimeSeries, ShockEvent, QueryParams, MetricMetadata } from '../../models/schemas';
+import type { DataProvider } from '../DataProvider';
+import type { TimeSeries, ShockEvent, QueryParams, MetricMetadata } from '../../models/schemas';
 
 /**
  * Open data provider stub
@@ -10,13 +10,14 @@ import { TimeSeries, ShockEvent, QueryParams, MetricMetadata } from '../../model
  * In production, connect to public APIs or data sources.
  */
 export class OpenDataProvider implements DataProvider {
-  async getSeries(metricId: string, params?: QueryParams): Promise<TimeSeries> {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  async getSeries(_metricId: string, _params?: QueryParams): Promise<TimeSeries> {
     // TODO: Implement API calls to open data sources
     console.warn('OpenDataProvider not implemented. Please use synthetic mode or implement real data adapters.');
 
     return {
-      metric_id: metricId,
-      label: `${metricId} (Open Data - Not Implemented)`,
+      metric_id: _metricId,
+      label: `${_metricId} (Open Data - Not Implemented)`,
       unit: 'N/A',
       frequency: 'monthly',
       observations: [],
@@ -24,7 +25,8 @@ export class OpenDataProvider implements DataProvider {
     };
   }
 
-  async getLatest(metricId: string, params?: QueryParams): Promise<number | null> {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  async getLatest(_metricId: string, _params?: QueryParams): Promise<number | null> {
     // TODO: Implement
     console.warn('OpenDataProvider.getLatest not implemented');
     return null;
@@ -48,7 +50,8 @@ export class OpenDataProvider implements DataProvider {
     return [];
   }
 
-  async getShockEventsByDateRange(startDate: string, endDate: string): Promise<ShockEvent[]> {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  async getShockEventsByDateRange(_startDate: string, _endDate: string): Promise<ShockEvent[]> {
     // TODO: Implement
     return [];
   }

@@ -1,4 +1,4 @@
-import { MetricMetadata } from '../../models/schemas';
+import type { MetricMetadata } from '../../models/schemas';
 
 export const METRIC_DEFINITIONS: Record<string, MetricMetadata> = {
   // Upstream Inputs

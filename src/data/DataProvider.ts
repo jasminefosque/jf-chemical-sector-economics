@@ -1,4 +1,4 @@
-import { TimeSeries, ShockEvent, QueryParams, MetricMetadata } from '../models/schemas';
+import type { TimeSeries, ShockEvent, QueryParams, MetricMetadata } from '../models/schemas';
 
 /**
  * Abstract data provider interface

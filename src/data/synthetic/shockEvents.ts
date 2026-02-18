@@ -1,4 +1,4 @@
-import { ShockEvent } from '../../models/schemas';
+import type { ShockEvent } from '../../models/schemas';
 
 /**
  * Predefined shock events for industrial sector simulation
